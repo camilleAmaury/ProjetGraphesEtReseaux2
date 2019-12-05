@@ -1,12 +1,13 @@
 package com.classes.Graph.Network;
 
+import com.classes.Graph.AbstractGraph;
 import com.classes.Graph.File.GraphFile;
 import com.classes.Graph.IGraph;
 import com.classes.Graph.Residual.GraphResidual;
 
 import java.util.*;
 
-public class GraphNetwork implements IGraph {
+public class GraphNetwork extends AbstractGraph {
 
     /* # ------------------> Properties <------------------ # */
     // List of LinkedList which contains what the user specify
@@ -55,12 +56,6 @@ public class GraphNetwork implements IGraph {
         this.nodeNumber = g.nodeNumber;
         this.graph = g.graph;
         this.initialNodeSize = g.initialNodeSize;
-    }
-    public GraphNetwork(GraphResidual g){
-        this.nodeValue = g.getNodeValue();
-        this.nodeNumber = g.getNodeNumber();
-        this.graph = g.getGraph();
-        this.initialNodeSize = g.getInitialNodeSize();
     }
 
     public GraphNetwork(ArcNetwork[][] graph){
@@ -115,21 +110,6 @@ public class GraphNetwork implements IGraph {
     }
 
     /**
-     * Method which returns all the predecessors of a specified node number
-     * @param node : int, the specified node
-     * @return LinkedList<Integer>, predecessors
-     */
-    public LinkedList<Integer> getPredecessors(int node){
-        LinkedList<Integer> result = new LinkedList<>();
-        for(int i = 0; i < this.graph.length; i++){
-            if(this.arcExists(i, node)){
-                result.add(i);
-            }
-        }
-        return result;
-    }
-
-    /**
      * Method which check if a specified arc between two node exists
      * @param node : int, the initial node (from)
      * @param nodeSought : int, the last node (to)
@@ -178,6 +158,14 @@ public class GraphNetwork implements IGraph {
             somme += this.getArcValue(0,j).getFlow();
         }
         return(somme);
+    }
+
+    /**
+     * Transform an existing graph to his residual propagated graph
+     * @param g : GraphResidual
+     */
+    public void replace(GraphResidual g){
+        this.graph = g.getGraph();
     }
 
     /**

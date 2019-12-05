@@ -1,18 +1,18 @@
-package com.classes.Graph.Residual;
+package com.classes.ListeAdjadence;
 
 import com.classes.Graph.AbstractGraph;
-import com.classes.Graph.IGraph;
 import com.classes.Graph.Network.ArcNetwork;
-import com.classes.Graph.Network.GraphNetwork;
 import com.classes.Graph.Network.NodeNetwork;
 
 import java.util.Dictionary;
 import java.util.LinkedList;
 
-public class GraphResidual extends AbstractGraph {
+public class ResidualList extends AbstractGraph {
+    /* # ------------------> Properties <------------------ # */
     /* # ------------------> Properties <------------------ # */
     // List of LinkedList which contains what the user specify
-    protected ArcNetwork[][] graph;
+    protected LinkedList<Arc>[] graph;
+
     // Associative table with reference an arc with its content
     protected Dictionary<Integer, NodeNetwork> nodeValue;
     // number of nodes (S)
@@ -20,7 +20,7 @@ public class GraphResidual extends AbstractGraph {
     protected int[] initialNodeSize;
 
     /* # ------------------> Constructors <------------------ # */
-    public GraphResidual(GraphNetwork g){
+    public ResidualList(ListeAdjacence g){
         this.nodeValue = g.getNodeValue();
         this.nodeNumber = g.getNodeNumber();
         this.graph = g.getGraph();
@@ -29,7 +29,7 @@ public class GraphResidual extends AbstractGraph {
 
     /* # ------------------> Accessors and Mutators <------------------ # */
 
-    public ArcNetwork[][] getGraph() {
+    public LinkedList<Arc>[] getGraph() {
         return graph;
     }
     public Dictionary<Integer, NodeNetwork> getNodeValue() {
@@ -60,9 +60,9 @@ public class GraphResidual extends AbstractGraph {
      */
     public LinkedList<Integer> getSuccesors(int node){
         LinkedList<Integer> result = new LinkedList<>();
-        for(int j = 0; j < this.graph[node].length; j++){
-            if(this.arcExists(node, j)){
-                result.add(j);
+        for(int j = 0; j < this.graph[node].size(); j++){
+            if(arcExists(node, this.graph[node].get(j).getTo().getId())){
+                result.add(this.graph[node].get(j).getTo().getId());
             }
         }
         return result;
@@ -75,7 +75,15 @@ public class GraphResidual extends AbstractGraph {
      * @return boolean, if the arc exists or not
      */
     public boolean arcExists(int node, int nodeSought){
-        return this.graph[node][nodeSought].getCapacity() - this.graph[node][nodeSought].getFlow() != 0;
+        for(int j = 0; j < this.graph[node].size(); j++){
+            Arc arc = this.graph[node].get(j);
+            if(arc.getTo().getId() == nodeSought){
+                if(arc.getCapacity() != arc.getFlow()){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /**
@@ -84,9 +92,14 @@ public class GraphResidual extends AbstractGraph {
      * @param toNode : int, the last node (to)
      * @return the value of the selected arc
      */
-    public ArcNetwork getArcValue(int fromNode, int toNode){
+    public Arc getArcValue(int fromNode, int toNode){
         try{
-            return (this.graph[fromNode][toNode]);
+            for(int j = 0; j < this.graph[fromNode].size(); j++) {
+                if (this.graph[fromNode].get(j).getTo().getId() == toNode) {
+                    return this.graph[fromNode].get(j);
+                }
+            }
+            throw new Exception("Not found");
         }catch (Exception e) {
             System.out.println("No existing arc value found");
             return null;
@@ -108,12 +121,12 @@ public class GraphResidual extends AbstractGraph {
     }
 
     public void print() {
-        System.out.println("-----> Graph Network <------");
+        System.out.println("-----> List Network <------");
         // log arcs
         System.out.println("\n-----> Arcs <------\n");
         for(int i = 0; i < this.nodeNumber; i++){
-            for(int j = 0; j < this.nodeNumber; j++){
-                System.out.println("Position in Graph[" + (i == 0 ? "S" : i) + "," + (j == this.nodeNumber-1 ? "T" : j) + "] : Capacity = " + this.getArcValue(i,j).getCapacity() + ", Flot = " + this.getArcValue(i,j).getFlow());
+            for(int j = 0; j < this.graph[i].size(); j++){
+                System.out.println("Position in Graph[" + (i == 0 ? "S" : i) + "," + (j == this.nodeNumber-1 ? "T" : j) + "] : Capacity = " + this.getArcValue(i,this.graph[i].get(j).getTo().getId()).getCapacity() + ", Flot = " + this.getArcValue(i,this.graph[i].get(j).getTo().getId()).getFlow());
             }
         }
         // log nodes

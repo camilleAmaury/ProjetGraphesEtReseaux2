@@ -2,9 +2,11 @@ package com.classes;
 
 import com.classes.Algorithms.CutAlgorithm.MinimumCut;
 import com.classes.Algorithms.FlotAlgorithm.FordFulkerson;
+import com.classes.Graph.AbstractGraph;
 import com.classes.Graph.File.GraphFile;
 import com.classes.Graph.Network.GraphNetwork;
 import com.classes.Graph.File.NodeFile;
+import com.classes.ListeAdjadence.ListeAdjacence;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -18,13 +20,20 @@ public class Util {
      * Methods which take a formated text file and convert it into java Objects
      * @param filename : the "xxx".txt filename
      * @param logs : if you want logs to be printed
+     * @param method : "list" or "matrix" to change the graph implementation
      */
-    public static GraphNetwork ConstructionReseau(String filename, boolean logs){
+    public static AbstractGraph ConstructionReseau(String filename, String method, boolean logs){
         try{
             // parse the file given to a graphFile object
             GraphFile g = Util.parserFileToGraphFile(filename, logs);
-            // convert to the network graph
-            GraphNetwork gr = g.toNetworkGraph();
+            AbstractGraph gr = null;
+            if(method == "matrix"){
+                // convert to the network graph
+                gr = g.toNetworkGraph();
+            }else if (method == "list"){
+                // convert to the adj list
+                gr = g.toAdjListGraph();
+            }
             if(logs) gr.print();
             return gr;
         }
@@ -40,11 +49,12 @@ public class Util {
      * @param logs : boolean, if you want to print information
      * @return GraphNetwork, the graph in his maximal flow state
      */
-    public static GraphNetwork CalculFlotMax(GraphNetwork graph, boolean logs) {
+    public static AbstractGraph CalculFlotMax(AbstractGraph graph, boolean logs) {
         FordFulkerson algo = new FordFulkerson();
-        graph = algo.executeAlgorithm(graph, false);
+        graph = algo.executeAlgorithm(graph, logs);
         if(logs) graph.print();
-        System.out.println("\nmaximum flow : " + graph.currentFlow());
+        System.out.println("\nmaximum flow : " +
+                (graph instanceof ListeAdjacence ? ((ListeAdjacence)graph).currentFlow() : ((GraphNetwork)graph).currentFlow()));
         return graph;
     }
 
@@ -53,7 +63,7 @@ public class Util {
      * @param graph : GraphNetwork, the maximum flow stated graph
      * @param logs : boolean, if you want to print the information
      */
-    public static Couple<ArrayList<Integer>, ArrayList<Integer>> CalculCoupeMin(GraphNetwork graph, boolean logs){
+    public static Couple<ArrayList<Integer>, ArrayList<Integer>> CalculCoupeMin(AbstractGraph graph, boolean logs){
         MinimumCut minCutAlgo = new MinimumCut();
         return(minCutAlgo.executeAlgorithm(graph, logs));
     }
@@ -62,10 +72,11 @@ public class Util {
      * Methods which resolve the BinIm problem
      * @param filename : String, the 1st min cut corresponding to the nodes which belong to the first dimension
      * @param logs : boolean, if you want to print information
+     * @param method : "list" or "matrix" to change the graph implementation
      */
-    public static void ResolveBinIm(String filename, boolean logs){
+    public static void ResolveBinIm(String filename, String method, boolean logs){
         // construct the graph from file
-        GraphNetwork g = Util.ConstructionReseau(filename, logs);
+        AbstractGraph g = Util.ConstructionReseau(filename, method, logs);
 
         // calculate the maximum flow
         g = Util.CalculFlotMax(g, logs);

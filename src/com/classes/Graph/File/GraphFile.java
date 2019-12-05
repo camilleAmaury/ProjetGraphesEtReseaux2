@@ -2,6 +2,7 @@ package com.classes.Graph.File;
 
 import com.classes.Graph.IGraph;
 import com.classes.Graph.Network.GraphNetwork;
+import com.classes.ListeAdjadence.ListeAdjacence;
 
 import java.util.Dictionary;
 import java.util.LinkedList;
@@ -58,21 +59,6 @@ public class GraphFile implements IGraph {
         for(int j = 0; j < potentialSuccessors.length; j++){
             if(potentialSuccessors[j].getPenality() != 0){
                 result.add(j);
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Method which returns all the predecessors of a specified node number
-     * @param node : int, the specified node
-     * @return LinkedList<Integer>, predecessors
-     */
-    public LinkedList<Integer> getPredecessors(int node){
-        LinkedList<Integer> result = new LinkedList<>();
-        for(int i = 0; i < this.graph.length; i++){
-            if(this.arcExists(i, node)){
-                result.add(i);
             }
         }
         return result;
@@ -142,5 +128,13 @@ public class GraphFile implements IGraph {
      */
     public GraphNetwork toNetworkGraph(){
         return new GraphNetwork(this);
+    }
+
+    /**
+     * Methods which convert a GraphFile to a GraphNetwork
+     * @return GraphNetwork, the GraphFile's graph converted
+     */
+    public ListeAdjacence toAdjListGraph(){
+        return new ListeAdjacence(this);
     }
 }

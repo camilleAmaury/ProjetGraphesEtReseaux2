@@ -8,7 +8,6 @@ public interface IGraph {
     int getNodeNumber();
     int[] getInitialNodeSize();
     LinkedList<Integer> getSuccesors(int node);
-    LinkedList<Integer> getPredecessors(int node);
     boolean arcExists(int node, int nodeSought);
     AbstractArc getArcValue(int fromNode, int toNode);
     AbstractNode getNodeValue(int node);
