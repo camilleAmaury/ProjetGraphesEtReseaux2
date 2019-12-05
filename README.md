@@ -4,8 +4,8 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/univnantes.svg" alt="Logo" width="150" height="75">
+  <a href="https://github.com/camilleAmaury/ProjetGraphesEtReseaux2">
+    <img src="images/univnantes.png" alt="Logo">
   </a>
 
   <h3 align="center">Network and Graph Project</h3>
@@ -16,8 +16,6 @@
 </p>
 
 
-
-<!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 * [About the Project](#about-the-project)
@@ -107,5 +105,6 @@ You can personnally dispose of everything else here, but you do have to mention 
 
 See Linkedin's Shield right at the top of the Readme.md.
 
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url-2]: https://www.linkedin.com/in/aniss-bentebib-a449a8155/
 [linkedin-url-3]: https://www.linkedin.com/in/camille-amaury-juge/
