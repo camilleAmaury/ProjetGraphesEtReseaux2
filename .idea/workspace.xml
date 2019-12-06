@@ -7,41 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a14f1cc-104b-4891-8b73-709aa1fd1a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/classes/Graph/AbstractGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/classes/ListeAdjadence/Arc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/classes/ListeAdjadence/ListeAdjacence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/classes/ListeAdjadence/ResidualList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetGraphe2EtReseaux.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetGraphe2EtReseaux.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetGraphe2EtReseaux.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetGraphe2EtReseaux.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Algorithms/CutAlgorithm/MinimumCut.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Algorithms/CutAlgorithm/MinimumCut.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Algorithms/FlotAlgorithm/FordFulkerson$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Algorithms/FlotAlgorithm/FordFulkerson$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Algorithms/FlotAlgorithm/FordFulkerson$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Algorithms/FlotAlgorithm/FordFulkerson$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Algorithms/FlotAlgorithm/FordFulkerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Algorithms/FlotAlgorithm/FordFulkerson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Graph/File/GraphFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Graph/File/GraphFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Graph/IGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Graph/IGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Graph/Network/GraphNetwork$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Graph/Network/GraphNetwork$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Graph/Network/GraphNetwork.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Graph/Network/GraphNetwork.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Graph/Residual/GraphResidual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Graph/Residual/GraphResidual.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Util$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Util$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/classes/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/com/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/test/BinImTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/test/BinImTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/test/FordFulkersonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/test/FordFulkersonTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/test/MinimumCutTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetGraphe2EtReseaux/test/MinimumCutTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/classes/Algorithms/CutAlgorithm/MinimumCut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/classes/Algorithms/CutAlgorithm/MinimumCut.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/classes/Algorithms/FlotAlgorithm/FordFulkerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/classes/Algorithms/FlotAlgorithm/FordFulkerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/classes/Graph/File/GraphFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/classes/Graph/File/GraphFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/classes/Graph/IGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/classes/Graph/IGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/classes/Graph/Network/GraphNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/classes/Graph/Network/GraphNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/classes/Graph/Residual/GraphResidual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/classes/Graph/Residual/GraphResidual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/classes/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/classes/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/BinImTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/BinImTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/FordFulkersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/FordFulkersonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MinimumCutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MinimumCutTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +22,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/classes/Algorithms/FlotAlgorithm/FordFulkerson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/FordFulkersonTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,13 +63,96 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/classes/Algorithms/FlotAlgorithm/FordFulkerson.java" />
+        <option value="$PROJECT_DIR$/src/test/FordFulkersonTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="120" />
+    <option name="y" value="-15" />
+    <option name="width" value="1750" />
+    <option name="height" value="1030" />
+  </component>
   <component name="ProjectId" id="1UYqIeFiL7rAvSw7ePMEzkWl9of" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ProjetGraphesEtReseaux2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetGraphesEtReseaux2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetGraphesEtReseaux2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetGraphesEtReseaux2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetGraphesEtReseaux2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetGraphesEtReseaux2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetGraphesEtReseaux2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetGraphesEtReseaux2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetGraphesEtReseaux2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetGraphesEtReseaux2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetGraphesEtReseaux2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetGraphesEtReseaux2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="FlotAlgorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetGraphesEtReseaux2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetGraphesEtReseaux2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetGraphesEtReseaux2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetGraphesEtReseaux2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -94,7 +170,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.BinImTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.main.Main" />
       <module name="ProjetGraphe2EtReseaux" />
@@ -155,10 +231,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BinImTest" />
-        <item itemvalue="JUnit.MinimumCutTest" />
         <item itemvalue="JUnit.FordFulkersonTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MinimumCutTest" />
       </list>
     </recent_temporary>
   </component>
@@ -175,16 +251,96 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="FordFulkersonTest - 2019.12.06 at 14h 56m 07s.xml">
+      <configuration name="FordFulkersonTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FordFulkersonTest - 2019.12.06 at 14h 56m 31s.xml">
+      <configuration name="FordFulkersonTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FordFulkersonTest - 2019.12.06 at 14h 58m 05s.xml">
+      <configuration name="FordFulkersonTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297587" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/classes/Algorithms/FlotAlgorithm/FordFulkerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/FordFulkersonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
