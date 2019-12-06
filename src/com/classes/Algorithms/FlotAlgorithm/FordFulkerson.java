@@ -23,10 +23,17 @@ public class FordFulkerson {
     /* # ------------------> Accessors and Mutators <------------------ # */
 
     /* # ------------------> Methods <------------------ # */
+
+    /**
+     * Methods which execute the ford fulkerson algorithm given a graph
+     * @param g : AbstractGraph(ListeAdjacence or NetworkGraph), the graph
+     * @param logs : if you want to print more informations
+     * @return the maximal stated flow graph
+     */
     public AbstractGraph executeAlgorithm(AbstractGraph g, boolean logs) {
         this.graphNetwork = FordFulkerson.initialization(g);
         this.graphResidual = this.graphNetwork instanceof ListeAdjacence ? new ResidualList((ListeAdjacence)this.graphNetwork) : new GraphResidual((GraphNetwork) this.graphNetwork);
-        ArrayList<Integer>paths = FordFulkerson.findANewPath(this.graphResidual);
+        ArrayList<Integer>paths = FordFulkerson.findFirstPath(this.graphResidual);
         // while there is a path available
         while(paths.contains(g.getNodeNumber()-1)){
             if(logs) System.out.println("P = " + paths.toString());
@@ -39,10 +46,16 @@ public class FordFulkerson {
                 ((GraphNetwork)this.graphNetwork).replace((GraphResidual) this.graphResidual);
             }
             this.step++;
-            paths = FordFulkerson.findANewPath(this.graphResidual);
+            paths = FordFulkerson.findFirstPath(this.graphResidual);
         }
         return this.graphNetwork;
     }
+
+    /**
+     * Methods which initialize every flow to 0
+     * @param g : AbstractGraph(ListeAdjacence or NetworkGraph), the graph
+     * @return : AbstractGraph initialized
+     */
     private static AbstractGraph initialization(AbstractGraph g){
         // instanciate all flow to 0
         for(int i = 0; i < g.getNodeNumber(); i++){
@@ -58,16 +71,28 @@ public class FordFulkerson {
         return g;
     }
 
-    private static ArrayList<Integer> findANewPath(AbstractGraph g){
+    /**
+     * Methods which find a path in the Residual Graph
+     * @param g : AbstractGraph(ResidualList or ResidualGraph), the graph
+     * @return ArrayList<Integer> : the path represented by nodes' id
+     */
+    private static ArrayList<Integer> findFirstPath(AbstractGraph g){
         // instanciate a boolean tab representing the nodes
         boolean[] isAlreadySeen = new boolean[g.getNodeNumber()];
         for(int i = 0; i < isAlreadySeen.length; i++){
             isAlreadySeen[i] = false;
         }
-        return rec_findAllPaths(g, 0, isAlreadySeen);
+        return rec_findFirstPaths(g, 0, isAlreadySeen);
     }
 
-    private static ArrayList<Integer> rec_findAllPaths(AbstractGraph g, int currentNode, boolean[] isAlreadySeen){
+    /**
+     * Methods which find a path in a graph
+     * @param g : AbstractGraph(ResidualList or ResidualGraph), the graph
+     * @param currentNode : int, the current node id
+     * @param isAlreadySeen : boolean[] which nodes have already been seen
+     * @return ArrayList<Integer> : the path represented by nodes' id
+     */
+    private static ArrayList<Integer> rec_findFirstPaths(AbstractGraph g, int currentNode, boolean[] isAlreadySeen){
         ArrayList<Integer> encapsulation = new ArrayList<Integer>(){};
         ArrayList<Integer> resRec = new ArrayList<Integer>(){};
         // if nodes is the pit
@@ -81,7 +106,8 @@ public class FordFulkerson {
             encapsulation.add(currentNode);
             for(int node : g.getSuccesors(currentNode)){
                 if(!isAlreadySeen[node]){
-                    resRec.addAll(rec_findAllPaths(g, node, isAlreadySeen));
+                    resRec.addAll(rec_findFirstPaths(g, node, isAlreadySeen));
+                    // we break the successor iteration if we found a path to the last node
                     if(resRec.contains(g.getNodeNumber()-1)){
                         encapsulation.addAll(resRec);
                         return encapsulation;
@@ -95,7 +121,13 @@ public class FordFulkerson {
         }
     }
 
-
+    /**
+     * Methods which calculate the min residual capacity to propagate on a path
+     * @param path : ArrayList<Integer>, the path represented by nodes' id
+     * @param g : AbstractGraph(ResidualList or ResidualGraph), the graph
+     * @param logs : Boolean, if you want to print more information
+     * @return : AbstractGraph(ResidualList or ResidualGraph), the graph
+     */
     private static float minResidualCapacity(ArrayList<Integer> path, AbstractGraph g, boolean logs){
         ArrayList<Float> pathSelected = new ArrayList<>();
         for(int i = 0; i < path.size()-1; i++){
@@ -115,6 +147,12 @@ public class FordFulkerson {
         return Util.min(pathSelected);
     }
 
+    /**
+     * Methods which spead the flow on a path in a graph
+     * @param flow : float, value to propagate
+     * @param g : AbstractGraph(ResidualList or ResidualGraph), the graph
+     * @param path : ArrayList<Integer>, the path represented by nodes' id
+     */
     private static void spreadFlow(float flow, AbstractGraph g, ArrayList<Integer> path){
         for(int i = 0; i < path.size()-1; i++){
             if(g instanceof ResidualList){

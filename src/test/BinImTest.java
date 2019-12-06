@@ -8,7 +8,7 @@ public class BinImTest {
 
     @Test
     void UnExemple() {
-        Util.ResolveBinIm("JeuDeDonnees", "matrix", false);
-        Util.ResolveBinIm("JeuDeDonnees", "list", false);
+        Util.ResolveBinIm("JeuDeDonneesDemo1prim", "matrix", false);
+        Util.ResolveBinIm("JeuDeDonneesDemo1prim", "list", false);
     }
 }

@@ -27,10 +27,10 @@ public class Util {
             // parse the file given to a graphFile object
             GraphFile g = Util.parserFileToGraphFile(filename, logs);
             AbstractGraph gr = null;
-            if(method == "matrix"){
+            if(method.equals("matrix")){
                 // convert to the network graph
                 gr = g.toNetworkGraph();
-            }else if (method == "list"){
+            }else if (method.equals("list")){
                 // convert to the adj list
                 gr = g.toAdjListGraph();
             }
